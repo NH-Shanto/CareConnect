@@ -18,7 +18,7 @@
             <li><a href="appointments.html">Appointments</a></li>
             <li><a href="orders.html" class="active">Meal Orders</a></li>
             <li><a href="../../profile.html">Profile</a></li>
-            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+            <li><a href="../../login.html">Logout</a></li>
         </ul>
     </header>
 
@@ -33,14 +33,14 @@
             </div>
         </div>
 
-        <!-- Product Cards Row -->
+        <!-- Product Cards -->
         <div class="row">
             <div class="col product-box">
                 <h3>Steamed Fish & Soft Rice</h3>
                 <p class="text-muted">Provider: Green Kitchen Catering</p>
                 <div class="product-price">৳ 220</div>
                 <p><span class="badge badge-success">Diabetic-Friendly</span> <span class="badge badge-info">Low-Salt</span></p>
-                <button type="button" onclick="addToCart('Steamed Fish & Soft Rice')" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
+                <button type="button" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
             </div>
 
             <div class="col product-box">
@@ -48,7 +48,7 @@
                 <p class="text-muted">Provider: Green Kitchen Catering</p>
                 <div class="product-price">৳ 160</div>
                 <p><span class="badge badge-pending">Soft Food</span> <span class="badge badge-success">Diabetic</span></p>
-                <button type="button" onclick="addToCart('Vegetable Oats Khichuri')" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
+                <button type="button" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
             </div>
 
             <div class="col product-box">
@@ -56,11 +56,11 @@
                 <p class="text-muted">Provider: CarePlus Medical Supplies</p>
                 <div class="product-price">৳ 350</div>
                 <p><span class="badge badge-info">Basic Essentials</span></p>
-                <button type="button" onclick="addToCart('Hygiene Essentials Pack')" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
+                <button type="button" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
             </div>
         </div>
 
-        <!-- Checkout Form Card -->
+        <!-- Checkout Form -->
         <div class="card">
             <h2>Delivery & Checkout Details</h2>
             <form id="order-form" onsubmit="return placeOrder()" method="post">

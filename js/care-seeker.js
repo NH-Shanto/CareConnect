@@ -14,7 +14,6 @@ function submitHelpRequest() {
     }
 
     alert("Help request posted successfully! Nearby volunteers have been notified.");
-    window.location.href = "dashboard.html";
     return false;
 }
 
