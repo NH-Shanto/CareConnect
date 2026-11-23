@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Top Emergency Bar */
+.top-bar {
+    background-color: #d9534f;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Header & Navbar */
+.navbar {
+    background-color: #006666;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+    background-color: #004d4d;
+    border-radius: 3px;
+}
+
+/* Containers */
+.container {
+    width: 85%;
+    max-width: 960px;
+    margin: 25px auto;
+}
+
+.container-sm {
+    max-width: 450px;
+    margin: 30px auto;
+}
+
+/* Headings */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #666666;
+    font-size: 13px;
+}
+
+/* Hero Banner */
+.banner {
+    background-color: #006666;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 26px;
+}
+
+.banner p {
+    color: #e0f2f1;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* Emergency Box */
+.emergency-box {
+    background-color: #ffe6e6;
+    border: 2px solid #cc0000;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.emergency-box h2 {
+    color: #cc0000;
+}
+
+.emergency-box p {
+    color: #990000;
+}
+
+/* Notice Box */
+.notice-box {
+    background-color: #fff9e6;
+    border-left: 4px solid #ffcc00;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.notice-box h3 {
+    color: #996600;
+}
+
+.notice-box p {
+    color: #664400;
+    margin-bottom: 0;
+}
+
+/* Guidelines List */
+.guidelines-list {
+    padding-left: 20px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* Card */
+.card {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #006666;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #004d4d;
+}
+
+.btn-secondary {
+    background-color: #337ab7;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #286090;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Simple Flex Columns */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* Simple Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.table th,
+.table td {
+    border: 1px solid #dddddd;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table th {
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-pending {
+    background-color: #ffebcc;
+    color: #cc6600;
+}
+
+.badge-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.badge-info {
+    background-color: #d9edf7;
+    color: #31708f;
+}
+
+.badge-danger {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+.badge-warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+}
+
+/* Alert Boxes for JavaScript feedback */
+.alert {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    color: #31708f;
+    border: 1px solid #bce8f1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Medicine Checklist Item */
+.med-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Product Item Box */
+.product-box {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #006666;
+    margin: 8px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #222222;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+/* Simple Mobile Responsiveness */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

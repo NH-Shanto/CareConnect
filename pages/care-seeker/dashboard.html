@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Care Seeker Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="request-help.html">Request Help</a></li>
+            <li><a href="medications.html">Medications</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="orders.html">Meal Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!-- Welcome Card -->
+        <div class="card">
+            <h1>Welcome, <b>Abdul Rahman</b></h1>
+            <p class="text-muted">Role: Care Seeker (Senior Citizen) | Location: <b>Dhanmondi, Dhaka</b> | ID: <b>CS-8842</b></p>
+        </div>
+
+        <!-- Emergency Assistance Alert Box (revealed by JS) -->
+        <div id="sos-alert-box" class="alert alert-danger hidden">
+            <strong>🚨 EMERGENCY ALERT ACTIVE!</strong> Broadcast signal sent to family guardian (Tariq Rahman: 01899887766) and 4 nearby verified volunteers. Stay calm, help is on the way.
+        </div>
+
+        <!-- Emergency Assistance Box -->
+        <div class="emergency-box">
+            <h2>Need Urgent Assistance?</h2>
+            <p>Press the emergency button below to send an immediate alert to your family guardian and nearby volunteers.</p>
+            <button type="button" onclick="sendEmergencyAlert()" class="btn btn-danger">🚨 NEED HELP NOW</button>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>2</b></h2>
+                <p class="text-muted">Active Help Requests</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b id="remaining-meds-count">2</b></h2>
+                <p class="text-muted">Medications Remaining Today</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>Tomorrow</b></h2>
+                <p class="text-muted">Next Doctor Appointment (10:00 AM)</p>
+            </div>
+        </div>
+
+        <!-- Recent Help Requests Table -->
+        <div class="card">
+            <h2>My Recent Help Requests</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Assigned Volunteer</th>
+                        <th>Date & Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#REQ-101</td>
+                        <td>Medicine Pickup</td>
+                        <td>Pick up blood pressure prescription from Dhanmondi Pharmacy</td>
+                        <td>Rafiq Ahmed</td>
+                        <td>Today, 10:30 AM</td>
+                        <td><span class="badge badge-info">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>#REQ-098</td>
+                        <td>Grocery Assistance</td>
+                        <td>Buy fresh fruits, soft bread, and low-fat milk</td>
+                        <td>Sadia Rahman</td>
+                        <td>Yesterday, 4:00 PM</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>#REQ-094</td>
+                        <td>Companionship</td>
+                        <td>Afternoon reading and garden walking assistance</td>
+                        <td>Tanvir Hasan</td>
+                        <td>28 Oct 2026</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/care-seeker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Admin Users & Complaints</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect Admin</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="verifications.html">Verifications</a></li>
+            <li><a href="users.html" class="active">Users & Complaints</a></li>
+            <li><a href="reports.html">System Reports</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>User Account & Complaint Management</h1>
+        <p class="text-muted">Manage system user privileges, review complaints, and maintain a secure community environment.</p>
+
+        <!-- User Accounts Table Card -->
+        <div class="card">
+            <h2>User Accounts Directory</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Registered Area</th>
+                        <th>Account Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Abdul Rahman</strong></td>
+                        <td>abdul.rahman@careconnect.local</td>
+                        <td>Care Seeker</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td><span class="badge badge-success badge-user-status">Active</span></td>
+                        <td><button type="button" class="btn btn-danger btn-sm btn-toggle-suspend" onclick="toggleUserStatus(this)">Suspend</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rafiq Ahmed</strong></td>
+                        <td>rafiq.ahmed@careconnect.local</td>
+                        <td>Volunteer Helper</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td><span class="badge badge-success badge-user-status">Active</span></td>
+                        <td><button type="button" class="btn btn-danger btn-sm btn-toggle-suspend" onclick="toggleUserStatus(this)">Suspend</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dr. Farhana Ahmed</strong></td>
+                        <td>dr.farhana@careconnect.local</td>
+                        <td>Doctor</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td><span class="badge badge-success badge-user-status">Active</span></td>
+                        <td><button type="button" class="btn btn-danger btn-sm btn-toggle-suspend" onclick="toggleUserStatus(this)">Suspend</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tariq Rahman</strong></td>
+                        <td>tariq.rahman@careconnect.local</td>
+                        <td>Family Guardian</td>
+                        <td>Gulshan, Dhaka</td>
+                        <td><span class="badge badge-success badge-user-status">Active</span></td>
+                        <td><button type="button" class="btn btn-danger btn-sm btn-toggle-suspend" onclick="toggleUserStatus(this)">Suspend</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Green Kitchen Catering</strong></td>
+                        <td>vendor.greenkitchen@careconnect.local</td>
+                        <td>Food Provider</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td><span class="badge badge-success badge-user-status">Active</span></td>
+                        <td><button type="button" class="btn btn-danger btn-sm btn-toggle-suspend" onclick="toggleUserStatus(this)">Suspend</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Complaints Investigation Card -->
+        <div class="card">
+            <h2>Reported User Complaints & Inquiries</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Complaint ID</th>
+                        <th>Reported By</th>
+                        <th>Subject / Against</th>
+                        <th>Incident Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#CMP-102</strong></td>
+                        <td>Mrs. Rokeya Begum</td>
+                        <td>Meal Delivery Delay</td>
+                        <td>Dinner package arrived 40 minutes past scheduled delivery window without prior notification.</td>
+                        <td><span class="badge badge-pending badge-complaint-status">Pending Review</span></td>
+                        <td><button type="button" class="btn btn-primary btn-sm btn-resolve-complaint" onclick="resolveComplaint(this)">Mark Resolved</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#CMP-099</strong></td>
+                        <td>Abdul Rahman</td>
+                        <td>App Navigation Feedback</td>
+                        <td>Requested larger font buttons for high-contrast viewing on emergency SOS screen.</td>
+                        <td><span class="badge badge-success badge-complaint-status">Resolved</span></td>
+                        <td><button type="button" class="btn btn-outline btn-sm" disabled>Resolved ✓</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

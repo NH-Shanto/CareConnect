@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Doctor Appointment Requests</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="appointments.html" class="active">Appointments</a></li>
+            <li><a href="prescriptions.html">Digital Prescriptions</a></li>
+            <li><a href="patient-records.html">Patient Records</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Appointment Requests Management</h1>
+        <p class="text-muted">Review incoming consultation requests from care seekers and confirm schedules.</p>
+
+        <!-- Requests Table Card -->
+        <div class="card">
+            <h2>Pending Appointment Requests</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Requested Date</th>
+                        <th>Care Seeker</th>
+                        <th>Age & Contact</th>
+                        <th>Reported Symptoms / Reason</th>
+                        <th>Patient Consent</th>
+                        <th>Current Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tomorrow (10:00 AM)</td>
+                        <td><strong>Abdul Rahman</strong></td>
+                        <td>Age: 72 | 01711223344</td>
+                        <td>Blood pressure fluctuation and headache since yesterday morning.</td>
+                        <td><span class="badge badge-success">Health History Granted</span></td>
+                        <td><span class="badge badge-pending badge-status">Pending Review</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-doctor-accept" onclick="acceptDoctorAppointment(this)">Accept</button>
+                            <button type="button" class="btn btn-outline btn-sm btn-doctor-decline" onclick="declineDoctorAppointment(this)" style="color: #666; border-color: #ccc; margin-left: 5px;">Decline</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05 Nov 2026 (3:00 PM)</td>
+                        <td><strong>Farida Yasmin</strong></td>
+                        <td>Age: 65 | 01912345678</td>
+                        <td>Knee joint inflammation, requesting pain management consultation.</td>
+                        <td><span class="badge badge-success">Health History Granted</span></td>
+                        <td><span class="badge badge-pending badge-status">Pending Review</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-doctor-accept" onclick="acceptDoctorAppointment(this)">Accept</button>
+                            <button type="button" class="btn btn-outline btn-sm btn-doctor-decline" onclick="declineDoctorAppointment(this)" style="color: #666; border-color: #ccc; margin-left: 5px;">Decline</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>08 Nov 2026 (11:00 AM)</td>
+                        <td><strong>Shamsur Rahman</strong></td>
+                        <td>Age: 79 | 01811224455</td>
+                        <td>Routine diabetes follow-up and prescription refill guidance.</td>
+                        <td><span class="badge badge-info">Basic Info Only</span></td>
+                        <td><span class="badge badge-pending badge-status">Pending Review</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-doctor-accept" onclick="acceptDoctorAppointment(this)">Accept</button>
+                            <button type="button" class="btn btn-outline btn-sm btn-doctor-decline" onclick="declineDoctorAppointment(this)" style="color: #666; border-color: #ccc; margin-left: 5px;">Decline</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Confirmed Consultations Card -->
+        <div class="card">
+            <h2>Confirmed Consultations</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Patient Name</th>
+                        <th>Consultation Method</th>
+                        <th>Status</th>
+                        <th>Prescription</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today, 10:00 AM</td>
+                        <td>Abdul Rahman</td>
+                        <td>In-Person Home Visit Assisted by Volunteer</td>
+                        <td><span class="badge badge-success">Confirmed</span></td>
+                        <td><a href="prescriptions.html" class="btn btn-secondary btn-sm">Issue Rx</a></td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday, 4:00 PM</td>
+                        <td>Sultana Razia</td>
+                        <td>Clinic Follow-up</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td><span class="badge badge-info">Rx Issued</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/doctor.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

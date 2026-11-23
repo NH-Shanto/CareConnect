@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Platform Analytics & Reports</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect Admin</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="verifications.html">Verifications</a></li>
+            <li><a href="users.html">Users & Complaints</a></li>
+            <li><a href="reports.html" class="active">System Reports</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Platform Analytics & Impact Reports</h1>
+        <p class="text-muted">Summary statistics of community care requests, volunteer hours, medical consultations, and dietary meal deliveries.</p>
+
+        <div id="report-alert" class="alert hidden"></div>
+
+        <!-- Filter Form Card -->
+        <div class="card">
+            <h2>Generate Report for Custom Date Range</h2>
+            <form id="report-filter-form" method="post" onsubmit="return generateReport()">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="report_from">From Date:</label>
+                        <input type="date" id="report_from" name="report_from" value="2026-10-01">
+                    </div>
+                    <div class="col form-group">
+                        <label for="report_to">To Date:</label>
+                        <input type="date" id="report_to" name="report_to" value="2026-11-02">
+                    </div>
+                    <div class="col form-group" style="display: flex; align-items: flex-end;">
+                        <button type="submit" class="btn btn-primary btn-block">Filter & Generate Report</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Overall KPI Cards -->
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>310</b></h2>
+                <p class="text-muted">Total Completed Tasks</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>486 hrs</b></h2>
+                <p class="text-muted">Total Volunteer Service Hours</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>182</b></h2>
+                <p class="text-muted">Dietary Meals Delivered</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>4.8 ⭐</b></h2>
+                <p class="text-muted">Average Community Satisfaction</p>
+            </div>
+        </div>
+
+        <!-- Service Category Breakdown Table -->
+        <div class="card">
+            <h2>Completed Tasks by Category</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Assistance Category</th>
+                        <th>Total Tasks Completed</th>
+                        <th>Average Fulfillment Time</th>
+                        <th>Community Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grocery Shopping & Essentials</td>
+                        <td>124 Tasks</td>
+                        <td>1.2 Hours</td>
+                        <td>4.9 ⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Prescription Medicine Pickup</td>
+                        <td>98 Tasks</td>
+                        <td>45 Minutes</td>
+                        <td>4.9 ⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Minor Home Maintenance & Repairs</td>
+                        <td>46 Tasks</td>
+                        <td>2.4 Hours</td>
+                        <td>4.7 ⭐</td>
+                    </tr>
+                    <tr>
+                        <td>Companionship & Conversation Visits</td>
+                        <td>42 Tasks</td>
+                        <td>1.8 Hours</td>
+                        <td>5.0 ⭐</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Top Volunteer Contributors -->
+        <div class="card">
+            <h2>Top Volunteer Contributors (Dhanmondi Zone)</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Volunteer Name</th>
+                        <th>Completed Errands</th>
+                        <th>Logged Hours</th>
+                        <th>Trust Badge</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Rafiq Ahmed</strong></td>
+                        <td>14 Errands</td>
+                        <td>28 Hours</td>
+                        <td><span class="badge badge-success">Community Hero ⭐</span></td>
+                        <td>4.9 / 5.0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sadia Rahman</strong></td>
+                        <td>12 Errands</td>
+                        <td>22 Hours</td>
+                        <td><span class="badge badge-success">Active Helper</span></td>
+                        <td>4.8 / 5.0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tanvir Hasan</strong></td>
+                        <td>9 Errands</td>
+                        <td>18 Hours</td>
+                        <td><span class="badge badge-info">Fast Responder</span></td>
+                        <td>4.9 / 5.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

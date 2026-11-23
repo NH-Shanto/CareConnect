@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Patient Health Records</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="prescriptions.html">Digital Prescriptions</a></li>
+            <li><a href="patient-records.html" class="active">Patient Records</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Patient Health Summaries & Check-up Records</h1>
+        <p class="text-muted">Review consent-based health summaries of elderly patients and log consultation notes.</p>
+
+        <div id="health-note-alert" class="alert hidden"></div>
+
+        <!-- Shared Patient Health Summary Card -->
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Shared Health Profile: <b>Abdul Rahman (ID: CS-8842)</b></h2>
+                <span class="badge badge-success">Patient Consent Active</span>
+            </div>
+            <p><strong>Age:</strong> 72 Years | <strong>Blood Group:</strong> O+ | <strong>Linked Guardian:</strong> Tariq Rahman (01899887766)</p>
+            
+            <div class="row" style="margin-top: 15px;">
+                <div class="col notice-box" style="margin-bottom: 0;">
+                    <h3>Chronic Conditions</h3>
+                    <p>● Type 2 Diabetes Mellitus (Diagnosed 2018)<br>● Essential Hypertension (Diagnosed 2015)<br>● Mild Osteoarthritis (Right Knee)</p>
+                </div>
+                <div class="col notice-box" style="margin-bottom: 0;">
+                    <h3>Known Drug Allergies</h3>
+                    <p>● Penicillin / Amoxicillin (Causes skin rash)<br>● Sulfa Antibiotics</p>
+                </div>
+                <div class="col notice-box" style="margin-bottom: 0;">
+                    <h3>Recent Vitals Baseline</h3>
+                    <p>● Blood Pressure: 135/85 mmHg<br>● Fasting Blood Glucose: 6.8 mmol/L<br>● Heart Rate: 74 bpm</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Check-up Notes Form Card -->
+        <div class="card">
+            <h2>Record Check-up & Consultation Notes</h2>
+            <form id="health-note-form" method="post" onsubmit="return saveHealthNotes()">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="note_patient">Patient Name</label>
+                        <input type="text" id="note_patient" name="note_patient" value="Abdul Rahman" required>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="bp">Blood Pressure Reading (mmHg)</label>
+                        <input type="text" id="bp" name="bp" placeholder="e.g. 130/80">
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="blood_sugar">Blood Glucose (mmol/L)</label>
+                        <input type="text" id="blood_sugar" name="blood_sugar" placeholder="e.g. 6.5">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="remarks">Clinical Check-up Notes & Guidance</label>
+                    <textarea id="remarks" name="remarks" placeholder="Enter findings, physical assessment, dietary modifications..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save Check-up Notes</button>
+            </form>
+        </div>
+
+        <!-- Previous Checkup History Table -->
+        <div class="card">
+            <h2>Previous Consultation Logs</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Vitals</th>
+                        <th>Doctor Notes</th>
+                        <th>Consulting Physician</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25 Oct 2026</td>
+                        <td>BP: 135/85 | Sugar: 7.1</td>
+                        <td>Patient reports mild dizziness after morning walk. Metformin dose maintained. Advised low sodium intake.</td>
+                        <td>Dr. Farhana Ahmed</td>
+                    </tr>
+                    <tr>
+                        <td>10 Sep 2026</td>
+                        <td>BP: 140/90 | Sugar: 6.9</td>
+                        <td>Routine quarterly checkup. Advised light 20-minute daily indoor walking. Knee joint mobility acceptable.</td>
+                        <td>Dr. Farhana Ahmed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/doctor.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

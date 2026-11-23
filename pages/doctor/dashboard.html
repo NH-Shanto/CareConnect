@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Doctor Portal</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="prescriptions.html">Digital Prescriptions</a></li>
+            <li><a href="patient-records.html">Patient Records</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!-- Welcome Card -->
+        <div class="card">
+            <h1>Welcome, <b>Dr. Farhana Ahmed</b>, MBBS, FCPS</h1>
+            <p class="text-muted">Specialization: <strong>General Medicine & Geriatrics</strong> | BMDC Reg No: <strong>A-54912</strong> | Status: <span class="badge badge-success">Verified Medical Practitioner</span></p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>2</b></h2>
+                <p class="text-muted">Pending Consultation Requests</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>3</b></h2>
+                <p class="text-muted">Appointments Scheduled Today</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>24</b></h2>
+                <p class="text-muted">Active Digital Prescriptions</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>18</b></h2>
+                <p class="text-muted">Linked Elderly Patients</p>
+            </div>
+        </div>
+
+        <!-- Today's Consultation Schedule -->
+        <div class="card">
+            <h2>Today's Consultation Schedule</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Patient Name</th>
+                        <th>Age</th>
+                        <th>Consultation Reason</th>
+                        <th>Consent Status</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>Abdul Rahman</td>
+                        <td>72</td>
+                        <td>Hypertension & Blood Sugar Checkup</td>
+                        <td><span class="badge badge-success">Health History Shared</span></td>
+                        <td><span class="badge badge-info">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td>11:30 AM</td>
+                        <td>Sultana Razia</td>
+                        <td>68</td>
+                        <td>Joint Pain & Mobility Advice</td>
+                        <td><span class="badge badge-success">Health History Shared</span></td>
+                        <td><span class="badge badge-info">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td>12:15 PM</td>
+                        <td>Mahbubul Alam</td>
+                        <td>75</td>
+                        <td>Routine Heart Medication Follow-up</td>
+                        <td><span class="badge badge-info">Basic Summary</span></td>
+                        <td><span class="badge badge-pending">Pending Check-in</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Quick Action Links -->
+        <div class="row">
+            <div class="col card text-center">
+                <h3>Create Digital Prescription</h3>
+                <p>Prescribe medications that sync directly to the care seeker's daily reminders.</p>
+                <a href="prescriptions.html" class="btn btn-primary btn-sm">Issue Prescription</a>
+            </div>
+            <div class="col card text-center">
+                <h3>Record Health Notes</h3>
+                <p>Record vital signs (blood pressure, glucose) and lifestyle recommendations.</p>
+                <a href="patient-records.html" class="btn btn-secondary btn-sm">Open Health Records</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/doctor.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

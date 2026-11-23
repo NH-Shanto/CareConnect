@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Medicine Schedule</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="request-help.html">Request Help</a></li>
+            <li><a href="medications.html" class="active">Medications</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="orders.html">Meal Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Daily Medicine Schedule & Reminders</h1>
+        <p class="text-muted">Keep track of doctor-prescribed medications and mark daily doses as taken.</p>
+
+        <!-- Refill Warning Box -->
+        <div class="notice-box">
+            <h3>Medicine Refill Notice</h3>
+            <p>You have approximately <strong>3 days</strong> of Metformin 500mg remaining. Please contact your doctor for a prescription refill.</p>
+        </div>
+
+        <div class="row">
+            <!-- Medicine Checklist Column -->
+            <div class="col card">
+                <h2>Today's Medication Checklist</h2>
+                <div id="med-list">
+                    <div class="med-item">
+                        <div>
+                            <h3>Tab. Metformin 500mg</h3>
+                            <p class="text-muted">Morning (8:00 AM) - After breakfast</p>
+                        </div>
+                        <div>
+                            <span class="badge badge-pending">Pending</span>
+                            <button type="button" onclick="toggleMedication(this)" class="btn btn-secondary btn-sm" style="margin-left: 8px;">Mark Taken</button>
+                        </div>
+                    </div>
+
+                    <div class="med-item">
+                        <div>
+                            <h3>Tab. Losartan 50mg</h3>
+                            <p class="text-muted">Afternoon (1:30 PM) - Blood pressure maintenance</p>
+                        </div>
+                        <div>
+                            <span class="badge badge-pending">Pending</span>
+                            <button type="button" onclick="toggleMedication(this)" class="btn btn-secondary btn-sm" style="margin-left: 8px;">Mark Taken</button>
+                        </div>
+                    </div>
+
+                    <div class="med-item">
+                        <div>
+                            <h3>Tab. Atorvastatin 10mg</h3>
+                            <p class="text-muted">Night (9:00 PM) - After dinner (Cholesterol)</p>
+                        </div>
+                        <div>
+                            <span class="badge badge-success">Taken</span>
+                            <button type="button" onclick="toggleMedication(this)" class="btn btn-outline btn-sm" style="margin-left: 8px; color: #333; border-color: #ccc;">Mark Taken</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Medicine Form Column -->
+            <div class="col card">
+                <h2>Add Medicine to Schedule</h2>
+                <form id="add-med-form" onsubmit="return addMedication()" method="post">
+                    <div class="form-group">
+                        <label for="med_name">Medicine Name</label>
+                        <input type="text" id="med_name" name="med_name" placeholder="e.g. Paracetamol" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dosage">Dosage Amount</label>
+                        <input type="text" id="dosage" name="dosage" placeholder="e.g. 500mg (1 Tablet)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time_slot">Scheduled Time</label>
+                        <select id="time_slot" name="time_slot" required>
+                            <option value="morning">Morning (8:00 AM)</option>
+                            <option value="afternoon">Afternoon (1:30 PM)</option>
+                            <option value="evening">Evening (6:30 PM)</option>
+                            <option value="night">Night (9:30 PM)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions">Instructions</label>
+                        <input type="text" id="instructions" name="instructions" placeholder="e.g. After meals with water">
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-block">Add to My Schedule</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/care-seeker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

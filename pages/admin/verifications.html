@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Admin Document Verification</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect Admin</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="verifications.html" class="active">Verifications</a></li>
+            <li><a href="users.html">Users & Complaints</a></li>
+            <li><a href="reports.html">System Reports</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>User Document Verification Queue</h1>
+        <p class="text-muted">Review submitted national identity documents, medical licenses, and business permits to protect community safety.</p>
+
+        <!-- Verification Notice Box -->
+        <div class="notice-box">
+            <h3>Verification Criteria Reminder</h3>
+            <p>Ensure that Volunteer National IDs are clearly legible, Doctor BMDC registration numbers are verified against official registers, and Food Providers have valid municipal trade licenses.</p>
+        </div>
+
+        <!-- Verification Requests Table -->
+        <div class="card">
+            <h2>Pending Applications</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Applicant Name</th>
+                        <th>Applied Role</th>
+                        <th>Document Type Submitted</th>
+                        <th>Document Number / Link</th>
+                        <th>Submitted Date</th>
+                        <th>Status</th>
+                        <th>Verification Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tanvir Hasan</strong></td>
+                        <td>Volunteer Helper</td>
+                        <td>Bangladesh National ID (NID)</td>
+                        <td>NID-1995267182910</td>
+                        <td>Today, 08:30 AM</td>
+                        <td><span class="badge badge-pending badge-status">Pending Review</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-admin-approve" onclick="approveVerification(this)">Approve</button>
+                            <button type="button" class="btn btn-danger btn-sm btn-admin-reject" onclick="rejectVerification(this)" style="margin-left: 5px;">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dr. Mahmudur Rahman</strong></td>
+                        <td>Doctor / Medical Team</td>
+                        <td>BMDC Medical License & Degree</td>
+                        <td>BMDC-Reg-89102-A</td>
+                        <td>Yesterday, 04:15 PM</td>
+                        <td><span class="badge badge-pending badge-status">Pending Review</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-admin-approve" onclick="approveVerification(this)">Approve</button>
+                            <button type="button" class="btn btn-danger btn-sm btn-admin-reject" onclick="rejectVerification(this)" style="margin-left: 5px;">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Healthy Bites Catering</strong></td>
+                        <td>Food & Supply Provider</td>
+                        <td>Trade License & Health Inspection</td>
+                        <td>TL-DHAKA-NORTH-5521</td>
+                        <td>29 Oct 2026</td>
+                        <td><span class="badge badge-pending badge-status">Pending Review</span></td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm btn-admin-approve" onclick="approveVerification(this)">Approve</button>
+                            <button type="button" class="btn btn-danger btn-sm btn-admin-reject" onclick="rejectVerification(this)" style="margin-left: 5px;">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Verified History Table -->
+        <div class="card">
+            <h2>Recently Verified Applicants</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Document Verified</th>
+                        <th>Verified Date</th>
+                        <th>Approval Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Rafiq Ahmed</strong></td>
+                        <td>Volunteer Helper</td>
+                        <td>National ID (NID-199826926XXXX)</td>
+                        <td>25 Oct 2026</td>
+                        <td><span class="badge badge-success">Approved ✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dr. Farhana Ahmed</strong></td>
+                        <td>Doctor</td>
+                        <td>BMDC Registration (A-54912)</td>
+                        <td>20 Oct 2026</td>
+                        <td><span class="badge badge-success">Approved ✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Green Kitchen Catering</strong></td>
+                        <td>Food Provider</td>
+                        <td>Trade License (TL-DH-2024-8819)</td>
+                        <td>18 Oct 2026</td>
+                        <td><span class="badge badge-success">Approved ✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

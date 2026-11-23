@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Order Meals & Supplies</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="request-help.html">Request Help</a></li>
+            <li><a href="medications.html">Medications</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="orders.html" class="active">Meal Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1>Dietary Meals & Daily Essentials</h1>
+                <p class="text-muted">Order specialized meals and daily essential items from approved local providers.</p>
+            </div>
+            <div>
+                <p><strong>Cart: </strong><span id="cart-count" class="badge badge-success">0</span> items</p>
+            </div>
+        </div>
+
+        <!-- Product Cards Row -->
+        <div class="row">
+            <div class="col product-box">
+                <h3>Steamed Fish & Soft Rice</h3>
+                <p class="text-muted">Provider: Green Kitchen Catering</p>
+                <div class="product-price">৳ 220</div>
+                <p><span class="badge badge-success">Diabetic-Friendly</span> <span class="badge badge-info">Low-Salt</span></p>
+                <button type="button" onclick="addToCart('Steamed Fish & Soft Rice')" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
+            </div>
+
+            <div class="col product-box">
+                <h3>Vegetable Oats Khichuri</h3>
+                <p class="text-muted">Provider: Green Kitchen Catering</p>
+                <div class="product-price">৳ 160</div>
+                <p><span class="badge badge-pending">Soft Food</span> <span class="badge badge-success">Diabetic</span></p>
+                <button type="button" onclick="addToCart('Vegetable Oats Khichuri')" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
+            </div>
+
+            <div class="col product-box">
+                <h3>Hygiene Essentials Pack</h3>
+                <p class="text-muted">Provider: CarePlus Medical Supplies</p>
+                <div class="product-price">৳ 350</div>
+                <p><span class="badge badge-info">Basic Essentials</span></p>
+                <button type="button" onclick="addToCart('Hygiene Essentials Pack')" class="btn btn-primary btn-sm btn-block">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Checkout Form Card -->
+        <div class="card">
+            <h2>Delivery & Checkout Details</h2>
+            <form id="order-form" onsubmit="return placeOrder()" method="post">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="order_type">Order Type</label>
+                        <select id="order_type" name="order_type">
+                            <option value="one-time">One-Time Meal Delivery</option>
+                            <option value="weekly">Weekly Subscription (7-Day Plan)</option>
+                        </select>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="delivery_time">Delivery Time Slot</label>
+                        <select id="delivery_time" name="delivery_time">
+                            <option value="lunch">Lunch Time (12:30 PM - 1:30 PM)</option>
+                            <option value="dinner">Dinner Time (7:30 PM - 8:30 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery_address">Delivery Address</label>
+                    <input type="text" id="delivery_address" name="delivery_address" value="House 14, Road 5, Dhanmondi, Dhaka" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Special Instructions (e.g. Extra soft, no spicy spices)</label>
+                    <input type="text" id="instructions" name="instructions" placeholder="e.g. Ring the doorbell twice, leave at front desk">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Place Delivery Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/care-seeker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

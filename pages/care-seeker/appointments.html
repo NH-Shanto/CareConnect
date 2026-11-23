@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Doctor Appointments</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="request-help.html">Request Help</a></li>
+            <li><a href="medications.html">Medications</a></li>
+            <li><a href="appointments.html" class="active">Appointments</a></li>
+            <li><a href="orders.html">Meal Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Doctor Appointments & Prescriptions</h1>
+        <p class="text-muted">Schedule consultations with verified doctors and view digital medical prescriptions.</p>
+
+        <div id="appointment-alert" class="alert hidden"></div>
+
+        <!-- Doctors Selection Cards -->
+        <h2>Available Verified Doctors</h2>
+        <div class="row">
+            <div class="col card text-center">
+                <h3>Dr. Farhana Ahmed</h3>
+                <p class="text-muted">General Medicine & Geriatrics</p>
+                <p><span class="badge badge-success">BMDC Verified</span></p>
+                <p class="text-muted">Availability: Sun, Tue, Thu (10 AM - 1 PM)</p>
+            </div>
+            <div class="col card text-center">
+                <h3>Dr. Rafiqul Islam</h3>
+                <p class="text-muted">Cardiologist (Heart Specialist)</p>
+                <p><span class="badge badge-success">BMDC Verified</span></p>
+                <p class="text-muted">Availability: Mon, Wed, Sat (3 PM - 6 PM)</p>
+            </div>
+            <div class="col card text-center">
+                <h3>Dr. Nazmul Huda</h3>
+                <p class="text-muted">Orthopedic & Mobility Specialist</p>
+                <p><span class="badge badge-success">BMDC Verified</span></p>
+                <p class="text-muted">Availability: Fri, Sat (11 AM - 2 PM)</p>
+            </div>
+        </div>
+
+        <!-- Book Appointment Form -->
+        <div class="card">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form" onsubmit="return bookAppointment()" method="post">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor" name="doctor" required>
+                            <option value="">-- Choose Doctor --</option>
+                            <option value="1">Dr. Farhana Ahmed (General Medicine & Geriatrics)</option>
+                            <option value="2">Dr. Rafiqul Islam (Cardiologist)</option>
+                            <option value="3">Dr. Nazmul Huda (Orthopedic Specialist)</option>
+                        </select>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="appointment_date">Preferred Date</label>
+                        <input type="date" id="appointment_date" name="appointment_date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="symptoms">Symptoms or Reason for Consultation</label>
+                    <textarea id="symptoms" name="symptoms" placeholder="Describe symptoms or reasons for visit..." required></textarea>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="consent" name="consent" checked>
+                    <label for="consent">Allow doctor to view my shared health summary and chronic conditions record.</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Appointment Request</button>
+            </form>
+        </div>
+
+        <!-- Prescriptions Table -->
+        <div class="card">
+            <h2>My Digital Prescriptions</h2>
+            <table class="table" id="appointments-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Doctor</th>
+                        <th>Diagnosis / Reason</th>
+                        <th>Prescribed Medicines / Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25 Oct 2026</td>
+                        <td>Dr. Farhana Ahmed</td>
+                        <td>Type 2 Diabetes & Hypertension</td>
+                        <td>Tab. Metformin 500mg (1-0-1), Tab. Losartan 50mg (0-1-0)</td>
+                    </tr>
+                    <tr>
+                        <td>12 Oct 2026</td>
+                        <td>Dr. Rafiqul Islam</td>
+                        <td>Lipid Profile Follow-up</td>
+                        <td>Tab. Atorvastatin 10mg (0-0-1 at night)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/care-seeker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
