@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Food Provider Portal</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="catalogue.html">Meal Catalogue</a></li>
+            <li><a href="orders.html">Manage Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h1>Welcome, <b>Green Kitchen Catering & Supplies</b></h1>
+            <p class="text-muted">Role: Food & Supply Provider | Status: <span class="badge badge-success">Approved Vendor</span> | Trade License: <strong>TL-DH-2024-8819</strong></p>
+        </div>
+
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>12</b></h2>
+                <p class="text-muted">Total Orders Today</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>3</b></h2>
+                <p class="text-muted">Pending Meal Deliveries</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>8</b></h2>
+                <p class="text-muted">Active Dietary Items</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>৳ 34,500</b></h2>
+                <p class="text-muted">Monthly Order Volume</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Today's Priority Meal Deliveries</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Address</th>
+                        <th>Items Ordered</th>
+                        <th>Dietary Tag</th>
+                        <th>Delivery Slot</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD-401</td>
+                        <td>Abdul Rahman</td>
+                        <td>House 14, Road 5, Dhanmondi</td>
+                        <td>Steamed Fish & Soft Rice</td>
+                        <td><span class="badge badge-success">Diabetic</span> <span class="badge badge-info">Low-Salt</span></td>
+                        <td>Lunch (12:30 PM - 1:30 PM)</td>
+                        <td><span class="badge badge-success">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-402</td>
+                        <td>Mrs. Rokeya Begum</td>
+                        <td>Road 8, Dhanmondi</td>
+                        <td>Vegetable Oats Khichuri</td>
+                        <td><span class="badge badge-pending">Soft Food</span></td>
+                        <td>Dinner (7:30 PM - 8:30 PM)</td>
+                        <td><span class="badge badge-warning">Preparing</span></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD-403</td>
+                        <td>Mahbubul Alam</td>
+                        <td>Road 27, Dhanmondi</td>
+                        <td>Hygiene Essentials Pack</td>
+                        <td><span class="badge badge-info">Essentials</span></td>
+                        <td>Afternoon (3:00 PM)</td>
+                        <td><span class="badge badge-info">Out for Delivery</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="col card text-center">
+                <h3>Update Meal Catalogue</h3>
+                <p>Add new diabetic-friendly, low-salt, or soft-diet meals to your menu.</p>
+                <a href="catalogue.html" class="btn btn-primary btn-sm">Manage Catalogue</a>
+            </div>
+            <div class="col card text-center">
+                <h3>Process Incoming Orders</h3>
+                <p>Accept new care seeker orders and update kitchen preparation status.</p>
+                <a href="orders.html" class="btn btn-secondary btn-sm">View All Orders</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <script src="../../js/provider.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

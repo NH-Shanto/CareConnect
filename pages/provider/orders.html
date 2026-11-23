@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Order Processing</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="catalogue.html">Meal Catalogue</a></li>
+            <li><a href="orders.html" class="active">Manage Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Manage Customer Orders & Deliveries</h1>
+        <p class="text-muted">Process incoming meal and supply orders placed by care seekers and family guardians.</p>
+
+        <div class="card">
+            <h2>Active Incoming Orders</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Care Seeker</th>
+                        <th>Delivery Address</th>
+                        <th>Items Ordered</th>
+                        <th>Plan Type</th>
+                        <th>Status</th>
+                        <th>Update Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#ORD-402</strong></td>
+                        <td>Mrs. Rokeya Begum (01722334455)</td>
+                        <td>Road 8, Dhanmondi, Dhaka</td>
+                        <td>Vegetable Oats Khichuri (Soft Food)</td>
+                        <td>Weekly Plan (Day 3/7)</td>
+                        <td><span class="badge badge-warning badge-status">Preparing</span></td>
+                        <td>
+                            <div style="display: flex; gap: 5px;">
+                                <select class="order-status-select" style="padding: 4px; font-size: 13px;">
+                                    <option value="preparing" selected>Preparing</option>
+                                    <option value="out-for-delivery">Out for Delivery</option>
+                                    <option value="delivered">Delivered</option>
+                                </select>
+                                <button type="button" class="btn btn-secondary btn-sm btn-update-order" onclick="updateDeliveryStatus(this)">Update</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>#ORD-403</strong></td>
+                        <td>Mahbubul Alam (01988776655)</td>
+                        <td>House 27, Road 27, Dhanmondi</td>
+                        <td>Hygiene Essentials Pack</td>
+                        <td>One-Time Order</td>
+                        <td><span class="badge badge-info badge-status">Out for Delivery</span></td>
+                        <td>
+                            <div style="display: flex; gap: 5px;">
+                                <select class="order-status-select" style="padding: 4px; font-size: 13px;">
+                                    <option value="preparing">Preparing</option>
+                                    <option value="out-for-delivery" selected>Out for Delivery</option>
+                                    <option value="delivered">Delivered</option>
+                                </select>
+                                <button type="button" class="btn btn-secondary btn-sm btn-update-order" onclick="updateDeliveryStatus(this)">Update</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>#ORD-401</strong></td>
+                        <td>Abdul Rahman (01711223344)</td>
+                        <td>House 14, Road 5, Dhanmondi</td>
+                        <td>Steamed Fish & Soft Rice</td>
+                        <td>One-Time (Lunch)</td>
+                        <td><span class="badge badge-success badge-status">Delivered</span></td>
+                        <td>
+                            <div style="display: flex; gap: 5px;">
+                                <select class="order-status-select" style="padding: 4px; font-size: 13px;">
+                                    <option value="preparing">Preparing</option>
+                                    <option value="out-for-delivery">Out for Delivery</option>
+                                    <option value="delivered" selected>Delivered</option>
+                                </select>
+                                <button type="button" class="btn btn-secondary btn-sm btn-update-order" onclick="updateDeliveryStatus(this)">Update</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <script src="../../js/provider.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
