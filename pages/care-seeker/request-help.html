@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Request Help</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="request-help.html" class="active">Request Help</a></li>
+            <li><a href="medications.html">Medications</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="orders.html">Meal Orders</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Post a New Help Request</h1>
+        <p class="text-muted">Create a request for verified neighborhood volunteers to assist you with daily tasks.</p>
+
+        <div class="row">
+            <!-- Request Form Column -->
+            <div class="col card">
+                <h2>Assistance Details</h2>
+                <form id="request-help-form" onsubmit="return submitHelpRequest()" method="post">
+                    <div class="form-group">
+                        <label for="category">Assistance Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">-- Choose Category --</option>
+                            <option value="groceries">Grocery Shopping</option>
+                            <option value="medicine">Prescription Medicine Pickup</option>
+                            <option value="repair">Minor Home Repair</option>
+                            <option value="companionship">Companionship Visit</option>
+                            <option value="medical">Medical Follow-up Assistance</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task_title">Short Title</label>
+                        <input type="text" id="task_title" name="task_title" placeholder="e.g. Need blood pressure medicine from local pharmacy" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Instructions for Volunteer</label>
+                        <textarea id="details" name="details" placeholder="Describe the items needed, location, or details..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency">
+                            <option value="normal">Normal (Within 24 hours)</option>
+                            <option value="urgent">High Urgency (Today within 2 hours)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Submit Help Request</button>
+                </form>
+            </div>
+
+            <!-- Guidelines Column -->
+            <div class="col card">
+                <h2>Safety Guidelines</h2>
+                <p>Please keep the following points in mind when requesting assistance:</p>
+                <ul class="guidelines-list">
+                    <li>All neighborhood volunteers are verified with their National ID by the platform administrator.</li>
+                    <li>Payment for groceries or medicine purchases must be made in cash directly to the volunteer upon delivery with receipt.</li>
+                    <li>Your linked family guardian will automatically receive a notification when a volunteer accepts this task.</li>
+                    <li>After completion, please leave a star rating to help maintain community trust.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/care-seeker.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

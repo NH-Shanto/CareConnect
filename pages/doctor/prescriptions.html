@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Digital Prescriptions</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="prescriptions.html" class="active">Digital Prescriptions</a></li>
+            <li><a href="patient-records.html">Patient Records</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Digital Prescription Generator</h1>
+        <p class="text-muted">Issue digital prescriptions that automatically sync directly to the care seeker's daily medicine schedule and notify their family guardian.</p>
+
+        <div id="prescription-alert" class="alert hidden"></div>
+
+        <!-- Create Prescription Form Card -->
+        <div class="card">
+            <h2>Create New Digital Prescription</h2>
+            <form id="prescription-form" method="post" onsubmit="return issuePrescription()">
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="patient_name">Patient Name</label>
+                        <input type="text" id="patient_name" name="patient_name" placeholder="e.g. Abdul Rahman" required>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="diagnosis">Diagnosis / Health Condition</label>
+                        <input type="text" id="diagnosis" name="diagnosis" placeholder="e.g. Type 2 Diabetes, High Blood Pressure" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="prescribed_med">Prescribed Medicine Name</label>
+                        <input type="text" id="prescribed_med" name="prescribed_med" placeholder="e.g. Metformin" required>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="dosage">Dosage & Schedule</label>
+                        <input type="text" id="dosage" name="dosage" placeholder="e.g. 500mg (1-0-1 after meals)" required>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="duration">Duration</label>
+                        <input type="text" id="duration" name="duration" placeholder="e.g. 30 Days" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="advice">Medical Advice & Precautions</label>
+                    <textarea id="advice" name="advice" placeholder="e.g. Drink plenty of water, avoid excessive sodium, monitor fasting sugar weekly."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Issue Digital Prescription</button>
+            </form>
+        </div>
+
+        <!-- Issued Prescriptions Table -->
+        <div class="card">
+            <h2>Issued Digital Prescriptions Log</h2>
+            <table class="table" id="prescriptions-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Patient</th>
+                        <th>Diagnosis</th>
+                        <th>Medication & Dosage</th>
+                        <th>Sync Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25 Oct 2026</td>
+                        <td><strong>Abdul Rahman</strong></td>
+                        <td>Type 2 Diabetes & Hypertension</td>
+                        <td>Tab. Metformin (500mg, 1-0-1), Tab. Losartan (50mg, 0-1-0) - 30 Days</td>
+                        <td><span class="badge badge-success">Active & Synced</span></td>
+                    </tr>
+                    <tr>
+                        <td>12 Oct 2026</td>
+                        <td><strong>Fatima Begum</strong></td>
+                        <td>Hyperlipidemia</td>
+                        <td>Tab. Atorvastatin (10mg, 0-0-1 at night) - 60 Days</td>
+                        <td><span class="badge badge-success">Active & Synced</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/doctor.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

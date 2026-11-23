@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Support Network for Elderly & Differently-Abled</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Emergency Top Ribbon -->
+    <div class="top-bar">
+        Immediate Emergency Support Needed? Call National Helpline: 999 or 
+        <a href="pages/care-seeker/dashboard.html">Go to Emergency SOS</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <a href="index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html" class="btn btn-secondary btn-sm">Register</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!-- Hero Banner -->
+        <section class="banner">
+            <h1>Community Care for Elderly & Differently-Abled</h1>
+            <p>
+                Connecting elderly and differently-abled individuals with verified local volunteers, healthcare doctors, nutritious meal providers, and family members.
+            </p>
+            <div>
+                <a href="register.html" class="btn btn-secondary">Request Care Today</a>
+                <a href="login.html" class="btn btn-outline">Login to Account</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="card" id="about">
+            <h2>About CareConnect</h2>
+            <p>
+                CareConnect is an academic web project developed for the CSC 3215 Web Technologies course at American International University-Bangladesh (AIUB). 
+                The platform aims to solve everyday difficulties faced by elderly individuals living alone by allowing them to post help requests for groceries, 
+                medicine pickup, and home repairs, while linked family guardians can monitor their safety remotely.
+            </p>
+        </section>
+
+        <!-- Core Services Section -->
+        <h2 id="services">Our Core Services</h2>
+        <div class="row">
+            <div class="col card text-center">
+                <h3>Daily Errands & Groceries</h3>
+                <p>Neighborhood volunteers assist with grocery shopping, prescription collection, and friendly visits.</p>
+            </div>
+            <div class="col card text-center">
+                <h3>Doctor Appointments</h3>
+                <p>Schedule consultations with verified doctors, view digital prescriptions, and track medicine schedules.</p>
+            </div>
+            <div class="col card text-center">
+                <h3>Specialized Dietary Meals</h3>
+                <p>Order fresh diabetic-friendly, low-salt, or soft meals from approved local food providers.</p>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="card">
+            <h2>How It Works</h2>
+            <div class="row">
+                <div class="col">
+                    <h3>1. Create Account</h3>
+                    <p>Register as a Care Seeker, Volunteer, Doctor, Guardian, or Provider.</p>
+                </div>
+                <div class="col">
+                    <h3>2. Post or Accept Request</h3>
+                    <p>Care seekers post tasks; verified helpers in the neighborhood accept them.</p>
+                </div>
+                <div class="col">
+                    <h3>3. Safe & Monitored</h3>
+                    <p>Tasks are completed with visit notes, and family guardians receive updates.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supported User Roles Table & Developer Portals -->
+        <div class="card">
+            <h2>Project Portals & Developer Dashboards</h2>
+            <p class="text-muted">Click any portal below to explore each developer's dashboard and frontend features:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Role</th>
+                        <th>Developer Assignment & Functionality</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Care Seeker</strong></td>
+                        <td><strong>Developer 1 (Leader - Sheikh Shymom Islam):</strong> Help requests, urgent SOS alert, medicine tracker, doctor appointments, and dietary meal orders.</td>
+                        <td><a href="pages/care-seeker/dashboard.html" class="btn btn-primary btn-sm">Open Portal</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Volunteer Helper</strong></td>
+                        <td><strong>Developer 2 (Ishtiaque Hossain):</strong> Browse nearby requests, accept/decline tasks, submit visit notes, skills & availability hours.</td>
+                        <td><a href="pages/volunteer/dashboard.html" class="btn btn-primary btn-sm">Open Portal</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Family Guardian</strong></td>
+                        <td><strong>Developer 3 (Nurul Huda Shanto):</strong> Remote monitoring of elderly relatives, medicine adherence, post requests on behalf, and emergency alerts.</td>
+                        <td><a href="pages/guardian/dashboard.html" class="btn btn-primary btn-sm">Open Portal</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Food Provider</strong></td>
+                        <td><strong>Developer 4 (MD. Fahim Hossain Khan):</strong> Dietary meals catalogue management (diabetic, low-salt, soft food), pricing, and incoming delivery orders.</td>
+                        <td><a href="pages/provider/dashboard.html" class="btn btn-primary btn-sm">Open Portal</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Doctor / Medical Team</strong></td>
+                        <td><strong>Extended Module (Leader):</strong> Manage consultations, issue digital prescriptions synced to care seeker schedule, and record patient check-up health notes.</td>
+                        <td><a href="pages/doctor/dashboard.html" class="btn btn-secondary btn-sm">Open Portal</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>System Administrator</strong></td>
+                        <td><strong>Extended Module (Leader):</strong> Verify applicant documents (NID, BMDC, Trade License), manage user accounts & complaints, and view platform reports.</td>
+                        <td><a href="pages/admin/dashboard.html" class="btn btn-secondary btn-sm">Open Portal</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files (External) -->
+    <script src="js/main.js"></script>
+</body>
+</html>

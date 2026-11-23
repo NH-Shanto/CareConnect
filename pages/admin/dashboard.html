@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Administrator Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- Admin Ribbon -->
+    <div class="top-bar" style="background-color: #2e353d;">
+        System Administrator Control Center | CareConnect Platform v1.0
+    </div>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect Admin</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="verifications.html">Verifications</a></li>
+            <li><a href="users.html">Users & Complaints</a></li>
+            <li><a href="reports.html">System Reports</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!-- Welcome Card -->
+        <div class="card">
+            <h1>Platform Administration & Monitoring</h1>
+            <p class="text-muted">Oversee user verifications, community safety, service fulfillment, and platform analytics.</p>
+        </div>
+
+        <!-- Quick Platform Stats -->
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>148</b></h2>
+                <p class="text-muted">Registered Users</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>42</b></h2>
+                <p class="text-muted">Verified Volunteers</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>16</b></h2>
+                <p class="text-muted">Registered Doctors</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>310</b></h2>
+                <p class="text-muted">Tasks Completed</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b style="color: #cc6600;">3</b></h2>
+                <p class="text-muted">Pending Verifications</p>
+            </div>
+        </div>
+
+        <!-- Platform Audit & Emergency Logs -->
+        <div class="card">
+            <h2>Recent Emergency Alerts & Platform Logs</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Event Type</th>
+                        <th>User Affected</th>
+                        <th>Location</th>
+                        <th>Response Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today, 09:12 AM</td>
+                        <td>SOS Button Press</td>
+                        <td>Abdul Rahman (CS-8842)</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td><span class="badge badge-success">Guardian & Volunteer Acknowledged</span></td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday, 06:45 PM</td>
+                        <td>Volunteer Registration</td>
+                        <td>Tanvir Hasan</td>
+                        <td>Mirpur, Dhaka</td>
+                        <td><span class="badge badge-pending">NID Document Pending Review</span></td>
+                    </tr>
+                    <tr>
+                        <td>28 Oct 2026</td>
+                        <td>Doctor Registration</td>
+                        <td>Dr. Nazmul Huda</td>
+                        <td>Dhanmondi, Dhaka</td>
+                        <td><span class="badge badge-success">BMDC Verified & Approved</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Admin Quick Actions Row -->
+        <div class="row">
+            <div class="col card text-center">
+                <h3>Document Verifications</h3>
+                <p>Verify National IDs, medical licenses, and business permits.</p>
+                <a href="verifications.html" class="btn btn-primary btn-sm">Review Pending (3)</a>
+            </div>
+            <div class="col card text-center">
+                <h3>Account Management</h3>
+                <p>Investigate user complaints and manage account status.</p>
+                <a href="users.html" class="btn btn-secondary btn-sm">Manage Accounts</a>
+            </div>
+            <div class="col card text-center">
+                <h3>Statistical Reports</h3>
+                <p>Generate summary metrics for volunteer hours and service fulfillment.</p>
+                <a href="reports.html" class="btn btn-secondary btn-sm">View Analytics</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
