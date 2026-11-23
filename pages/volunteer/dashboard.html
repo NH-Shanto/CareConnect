@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Volunteer Helper Dashboard</title>
+    <link rel="stylesheet" href="../../css/volunteer.css">
+</head>
+<body>
+
+    <!-- Emergency Ribbon -->
+    <div class="top-bar">
+        Community Volunteer Response Network | Active Region: <strong>Dhanmondi, Dhaka</strong>
+    </div>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="browse-requests.html">Browse Requests</a></li>
+            <li><a href="my-tasks.html">My Tasks</a></li>
+            <li><a href="skills.html">Skills & Availability</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!-- Welcome Card -->
+        <div class="card">
+            <h1>Welcome, <b>Rafiq Ahmed</b></h1>
+            <p class="text-muted">Role: Verified Volunteer Helper | Trust Rating: <strong>4.9 / 5.0 ⭐</strong> | Badges: <span class="badge badge-success">NID Verified</span> <span class="badge badge-info">Community Hero</span></p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="row">
+            <div class="col card text-center">
+                <h2><b>4</b></h2>
+                <p class="text-muted">Open Requests Nearby</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>1</b></h2>
+                <p class="text-muted">Task Currently In Progress</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>28 hrs</b></h2>
+                <p class="text-muted">Total Volunteer Service</p>
+            </div>
+            <div class="col card text-center">
+                <h2><b>14</b></h2>
+                <p class="text-muted">Tasks Completed</p>
+            </div>
+        </div>
+
+        <!-- Active Task In-Progress Card -->
+        <div class="card">
+            <h2>Current Active Task</h2>
+            <div class="notice-box">
+                <h3>#REQ-101: Prescription Medicine Pickup</h3>
+                <p><strong>Care Seeker:</strong> Abdul Rahman (Age 72) — House 14, Road 5, Dhanmondi</p>
+                <p><strong>Task Details:</strong> Collect blood pressure medicines from Dhanmondi Square Pharmacy and deliver with receipt.</p>
+                <p><strong>Status:</strong> <span class="badge badge-info">In Progress</span></p>
+                <div class="task-button">
+                    <a href="my-tasks.html" class="btn btn-primary btn-sm">Complete Task & Add Visit Note</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Volunteer History Table -->
+        <div class="card">
+            <h2>Recent Completed Services</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Care Seeker</th>
+                        <th>Category</th>
+                        <th>Completed Date</th>
+                        <th>Hours</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#REQ-095</td>
+                        <td>Fatima Begum</td>
+                        <td>Grocery Shopping</td>
+                        <td>30 Oct 2026</td>
+                        <td>1.5 hrs</td>
+                        <td>⭐⭐⭐⭐⭐ "Very helpful and polite!"</td>
+                    </tr>
+                    <tr>
+                        <td>#REQ-088</td>
+                        <td>Kamal Uddin</td>
+                        <td>Minor Home Repair</td>
+                        <td>25 Oct 2026</td>
+                        <td>2.0 hrs</td>
+                        <td>⭐⭐⭐⭐⭐ "Fixed door latch quickly."</td>
+                    </tr>
+                    <tr>
+                        <td>#REQ-081</td>
+                        <td>Amina Khatun</td>
+                        <td>Companionship Visit</td>
+                        <td>20 Oct 2026</td>
+                        <td>2.0 hrs</td>
+                        <td>⭐⭐⭐⭐⭐ "Wonderful conversation."</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files (External) -->
+    <script src="../../js/volunteer.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

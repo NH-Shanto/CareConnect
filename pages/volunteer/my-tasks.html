@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - My Volunteer Tasks</title>
+    <link rel="stylesheet" href="../../css/volunteer.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="browse-requests.html">Browse Requests</a></li>
+            <li><a href="my-tasks.html" class="active">My Tasks</a></li>
+            <li><a href="skills.html">Skills & Availability</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>My Assigned Volunteer Tasks</h1>
+        <p class="text-muted">Track tasks you have accepted, update their progress, and record visit notes for the care seeker and family guardian.</p>
+
+        <!-- Task 1: In Progress -->
+        <div class="card">
+            <div class="task-card-header">
+                <h2>#REQ-101: Prescription Medicine Pickup</h2>
+                <span class="badge badge-info badge-status">In Progress</span>
+            </div>
+            <p><strong>Care Seeker:</strong> Abdul Rahman (01711223344) | <strong>Address:</strong> House 14, Road 5, Dhanmondi</p>
+            <p><strong>Instructions:</strong> Pick up blood pressure prescription from Dhanmondi Pharmacy. Bring receipt for cash payment.</p>
+
+            <div class="saved-note-container hidden notice-box saved-note-spacing"></div>
+
+            <!-- Update Status & Visit Note Form -->
+            <form onsubmit="return submitVisitNote()" class="visit-note-form">
+                <h3>Update Task Status & Record Visit Note</h3>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>Update Status:</label>
+                        <select class="task-status-select">
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed" selected>Mark as Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Visit Note / Summary:</label>
+                    <textarea placeholder="e.g. Purchased prescribed medicine from pharmacy (receipt attached) and delivered to Mr. Abdul Rahman. Paid ৳ 420." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Visit Note & Update Status</button>
+            </form>
+        </div>
+
+        <!-- Task 2: Already Completed -->
+        <div class="card">
+            <div class="task-card-header">
+                <h2>#REQ-095: Grocery Shopping Assistance</h2>
+                <span class="badge badge-success badge-status">Completed</span>
+            </div>
+            <p><strong>Care Seeker:</strong> Fatima Begum | <strong>Address:</strong> Road 12, Dhanmondi</p>
+            <div class="notice-box saved-note-spacing">
+                <p><strong>Visit Note:</strong> "Purchased fresh vegetables, brown bread, and cooking oil from Agora Superstore. Handed over at 4:30 PM with receipt. Total cost ৳ 680."</p>
+                <p class="text-muted">Completed on: 30 Oct 2026 | Volunteer Hours Logged: 1.5 hrs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files (External) -->
+    <script src="../../js/volunteer.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
