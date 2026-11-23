@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Volunteer Skills & Availability</title>
+    <link rel="stylesheet" href="../../css/volunteer.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="browse-requests.html">Browse Requests</a></li>
+            <li><a href="my-tasks.html">My Tasks</a></li>
+            <li><a href="skills.html" class="active">Skills & Availability</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Volunteer Skills & Availability Profile</h1>
+        <p class="text-muted">Set your helping capabilities, preferred service locations, and active time slots.</p>
+
+        <div id="skills-alert" class="alert hidden"></div>
+
+        <!-- Verification Status Notice -->
+        <div class="notice-box">
+            <h3>Document Verification Status: <span class="badge badge-success">Approved & Verified</span></h3>
+            <p>Your National ID document (NID: 199826926XXXX) has been verified by the CareConnect administrator. You are authorized to accept community tasks.</p>
+        </div>
+
+        <div class="row">
+            <!-- Profile Form Column -->
+            <div class="col card">
+                <h2>Update Skills & Working Hours</h2>
+                <form id="volunteer-skills-form" onsubmit="return saveVolunteerSkills()" method="post">
+                    <div class="form-group">
+                        <label>Preferred Service Area / Neighborhood</label>
+                        <select id="service_area" required>
+                            <option value="dhanmondi" selected>Dhanmondi, Dhaka</option>
+                            <option value="mohammadpur">Mohammadpur, Dhaka</option>
+                            <option value="mirpur">Mirpur, Dhaka</option>
+                            <option value="gulshan">Gulshan / Banani, Dhaka</option>
+                            <option value="uttara">Uttara, Dhaka</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Skills & Services You Can Provide:</label>
+                        <div class="form-check">
+                            <input type="checkbox" id="skill_groceries" checked>
+                            <label for="skill_groceries">Grocery Shopping & Daily Errands</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="skill_medicine" checked>
+                            <label for="skill_medicine">Prescription Medicine Collection</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="skill_companionship" checked>
+                            <label for="skill_companionship">Companionship, Conversation & Reading</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="skill_repairs">
+                            <label for="skill_repairs">Minor Home Maintenance & Plumbing Repairs</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="skill_tech">
+                            <label for="skill_tech">Basic Phone / Tech Assistance for Elderly</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Available Days & Time Slots:</label>
+                        <div class="form-check">
+                            <input type="checkbox" id="slot_morning" checked>
+                            <label for="slot_morning">Morning (8:00 AM - 12:00 PM)</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="slot_afternoon">
+                            <label for="slot_afternoon">Afternoon (1:00 PM - 5:00 PM)</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="slot_evening" checked>
+                            <label for="slot_evening">Evening (5:00 PM - 8:00 PM)</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="slot_weekends" checked>
+                            <label for="slot_weekends">Weekends (Friday & Saturday)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_doc">Upload Updated Identity Document (NID / Student ID):</label>
+                        <input type="file" id="id_doc">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Save Skills Profile</button>
+                </form>
+            </div>
+
+            <!-- Trust Badge & Stats Column -->
+            <div class="col card">
+                <h2>Community Trust & Badges</h2>
+                <p>Volunteers gain community trust scores based on verified identity, completed tasks, and care seeker ratings.</p>
+
+                <div class="med-item">
+                    <div>
+                        <h3>National ID Verification</h3>
+                        <p class="text-muted">Verified by Admin</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-success">Verified</span>
+                    </div>
+                </div>
+
+                <div class="med-item">
+                    <div>
+                        <h3>Community Hero Badge</h3>
+                        <p class="text-muted">Completed 10+ errands with 5-star ratings</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-info">Earned ⭐</span>
+                    </div>
+                </div>
+
+                <div class="med-item">
+                    <div>
+                        <h3>Emergency Fast Responder</h3>
+                        <p class="text-muted">Quick response to urgent medication needs</p>
+                    </div>
+                    <div>
+                        <span class="badge badge-success">Active</span>
+                    </div>
+                </div>
+
+                <div class="notice-box skills-rating-box">
+                    <h3>Current Rating: 4.9 / 5.0</h3>
+                    <p>Based on 14 care seeker reviews. Keep up the great service!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files (External) -->
+    <script src="../../js/volunteer.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>

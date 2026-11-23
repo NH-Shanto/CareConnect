@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Browse Help Requests</title>
+    <link rel="stylesheet" href="../../css/volunteer.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <a href="../../index.html" class="logo">CareConnect</a>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="browse-requests.html" class="active">Browse Requests</a></li>
+            <li><a href="my-tasks.html">My Tasks</a></li>
+            <li><a href="skills.html">Skills & Availability</a></li>
+            <li><a href="../../profile.html">Profile</a></li>
+            <li><a href="../../login.html" onclick="return confirmLogout()">Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>Browse Nearby Help Requests</h1>
+        <p class="text-muted">Accept volunteer tasks requested by elderly and differently-abled individuals in your neighborhood.</p>
+
+        <!-- Filter Card -->
+        <div class="card">
+            <div class="row filter-row">
+                <div class="col form-group filter-form-group">
+                    <label for="filter-category">Filter by Category:</label>
+                    <select id="filter-category">
+                        <option value="all">All Categories</option>
+                        <option value="groceries">Grocery Shopping</option>
+                        <option value="medicine">Prescription Medicine Pickup</option>
+                        <option value="repairs">Minor Home Repairs</option>
+                        <option value="companionship">Companionship</option>
+                    </select>
+                </div>
+                <div class="col filter-col">
+                    <p class="text-muted filter-text">Showing requests within <strong>3.0 km</strong> of Dhanmondi</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Request 1 -->
+        <div class="card task-item" data-category="medicine">
+            <div class="task-header">
+                <div>
+                    <h2>#REQ-105: Urgent Blood Pressure & Heart Medication Pickup</h2>
+                    <p class="text-muted">Posted by: <strong>Abdul Rahman</strong> | Location: <strong>House 14, Road 5, Dhanmondi (0.6 km away)</strong></p>
+                </div>
+                <div>
+                    <span class="badge badge-danger">High Urgency (Within 2 hrs)</span>
+                    <span class="badge badge-pending badge-status">Open</span>
+                </div>
+            </div>
+            <p>Need someone to collect Metformin and Losartan prescription from Labaid Pharmacy and deliver to my residence. Cash will be paid upon delivery with receipt.</p>
+            <div class="task-actions">
+                <button type="button" onclick="acceptTask(this)" class="btn btn-primary btn-sm">Accept Task</button>
+                <button type="button" onclick="declineTask(this)" class="btn btn-outline btn-sm btn-decline">Decline</button>
+            </div>
+        </div>
+
+        <!-- Request 2 -->
+        <div class="card task-item" data-category="groceries">
+            <div class="task-header">
+                <div>
+                    <h2>#REQ-106: Weekly Fresh Vegetables & Fruit Shopping</h2>
+                    <p class="text-muted">Posted by: <strong>Mrs. Rokeya Begum</strong> | Location: <strong>Road 8, Dhanmondi (1.2 km away)</strong></p>
+                </div>
+                <div>
+                    <span class="badge badge-info">Normal Urgency</span>
+                    <span class="badge badge-pending badge-status">Open</span>
+                </div>
+            </div>
+            <p>I have difficulty walking due to arthritis. Need fresh green vegetables, 1 dozen eggs, and 1 kg apples from the local market. Handover at gate.</p>
+            <div class="task-actions">
+                <button type="button" onclick="acceptTask(this)" class="btn btn-primary btn-sm">Accept Task</button>
+                <button type="button" onclick="declineTask(this)" class="btn btn-outline btn-sm btn-decline">Decline</button>
+            </div>
+        </div>
+
+        <!-- Request 3 -->
+        <div class="card task-item" data-category="repairs">
+            <div class="task-header">
+                <div>
+                    <h2>#REQ-107: Kitchen Water Tap Leak Repair</h2>
+                    <p class="text-muted">Posted by: <strong>Mr. Anisul Haque</strong> | Location: <strong>Road 27, Dhanmondi (1.8 km away)</strong></p>
+                </div>
+                <div>
+                    <span class="badge badge-info">Normal Urgency</span>
+                    <span class="badge badge-pending badge-status">Open</span>
+                </div>
+            </div>
+            <p>Minor washer replacement needed for kitchen sink tap. Tools can be provided, just need a handy volunteer to assist.</p>
+            <div class="task-actions">
+                <button type="button" onclick="acceptTask(this)" class="btn btn-primary btn-sm">Accept Task</button>
+                <button type="button" onclick="declineTask(this)" class="btn btn-outline btn-sm btn-decline">Decline</button>
+            </div>
+        </div>
+
+        <!-- Request 4 -->
+        <div class="card task-item" data-category="companionship">
+            <div class="task-header">
+                <div>
+                    <h2>#REQ-108: Weekend Afternoon Reading & Walk</h2>
+                    <p class="text-muted">Posted by: <strong>Jahangir Alam</strong> | Location: <strong>Road 15, Dhanmondi (1.4 km away)</strong></p>
+                </div>
+                <div>
+                    <span class="badge badge-info">Normal Urgency</span>
+                    <span class="badge badge-pending badge-status">Open</span>
+                </div>
+            </div>
+            <p>Looking for a friendly volunteer to spend an hour reading newspaper articles and assisting on a short park stroll.</p>
+            <div class="task-actions">
+                <button type="button" onclick="acceptTask(this)" class="btn btn-primary btn-sm">Accept Task</button>
+                <button type="button" onclick="declineTask(this)" class="btn btn-outline btn-sm btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CareConnect - AIUB Web Technologies Group 5</p>
+    </footer>
+
+    <!-- JavaScript Files (External) -->
+    <script src="../../js/volunteer.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
